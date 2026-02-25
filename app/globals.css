@@ -24,3 +24,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.stepper-panel {
+  min-height: 520px;
+}
+
+@media (max-width: 640px) {
+  .stepper-panel {
+    min-height: 420px;
+    padding: 16px;
+  }
+}

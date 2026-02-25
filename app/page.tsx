@@ -2,19 +2,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 px-4 py-10 text-slate-900">
       <main className="mx-auto w-full max-w-6xl">
-        <header className="mb-8 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">UI Stepper</p>
-            <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">Formulario por pasos</h1>
-          </div>
-          <button className="rounded-full border border-slate-300 bg-white/70 px-4 py-2 text-sm font-semibold shadow-sm transition hover:bg-white">
-            Ajustar layout
-          </button>
-        </header>
+        
 
         <section className="grid auto-rows-[minmax(140px,_auto)] grid-cols-1 gap-6 md:grid-cols-12">
           <aside className="flex flex-col justify-between rounded-[32px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-1 md:row-span-3 md:row-start-1">
-            <div className="relative flex h-full min-h-[520px] flex-1 flex-col gap-6 overflow-hidden rounded-2xl border border-slate-100 bg-indigo-100 p-5">
+            <div className="stepper-panel relative flex h-full w-full flex-1 flex-col gap-6 overflow-hidden rounded-2xl border border-slate-100 bg-indigo-100 p-5">
               <svg
                 viewBox="0 0 320 120"
                 preserveAspectRatio="xMidYMid slice"
@@ -47,7 +39,7 @@ export default function Home() {
               </div>
 
               <nav className="relative flex-1">
-                <ol className="flex flex-col gap-6">
+                <ol className="flex flex-col gap-5 sm:gap-6">
                   <li className="flex items-start gap-4">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                       <span className="text-xs font-bold">1</span>
