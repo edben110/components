@@ -13,7 +13,7 @@ export default function Home() {
         </header>
 
         <section className="grid auto-rows-[minmax(140px,_auto)] grid-cols-1 gap-6 md:grid-cols-12">
-          <aside className="flex flex-col justify-between gap-6 rounded-[32px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-1 md:row-span-4 md:row-start-1">
+          <aside className="flex flex-col justify-between gap-6 rounded-[32px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-1 md:row-span-3 md:row-start-1">
             <div className="flex items-center justify-between">
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-100 text-indigo-600">
                 <span className="h-2.5 w-2.5 rounded-sm bg-indigo-500" />
@@ -60,6 +60,26 @@ export default function Home() {
                 </li>
               </ol>
             </nav>
+            <div className="relative h-28 w-full overflow-hidden rounded-2xl border border-slate-100 bg-indigo-50">
+              <svg viewBox="0 0 320 120" className="absolute inset-0 h-full w-full" aria-hidden="true">
+                <defs>
+                  <linearGradient id="stepper-geo" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#e0e7ff" />
+                    <stop offset="100%" stopColor="#f5f3ff" />
+                  </linearGradient>
+                  <radialGradient id="stepper-glow" cx="0" cy="0" r="1" gradientTransform="translate(70 40) scale(120)">
+                    <stop offset="0%" stopColor="#c7d2fe" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#eef2ff" stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+                <rect x="0" y="0" width="320" height="120" fill="url(#stepper-geo)" />
+                <rect x="0" y="0" width="320" height="120" fill="url(#stepper-glow)" />
+                <circle cx="70" cy="55" r="26" fill="#e0f2fe" />
+                <circle cx="70" cy="55" r="10" fill="#4f46e5" />
+                <path d="M225 120 L280 80 L320 120 Z" fill="#a5b4fc" />
+                <path d="M255 120 L300 90 L320 120 Z" fill="#818cf8" />
+              </svg>
+            </div>
             <footer className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
               <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400">
                 ?
