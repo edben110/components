@@ -1,115 +1,183 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zinc-200 px-4 py-10 text-zinc-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 px-4 py-10 text-slate-900">
       <main className="mx-auto w-full max-w-6xl">
         <header className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">Componentes</p>
-            <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">Grid con 5 bloques flex</h1>
+            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">UI Stepper</p>
+            <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">Formulario por pasos</h1>
           </div>
-          <button className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold transition hover:bg-zinc-900 hover:text-white">
-            Editar layout
+          <button className="rounded-full border border-slate-300 bg-white/70 px-4 py-2 text-sm font-semibold shadow-sm transition hover:bg-white">
+            Ajustar layout
           </button>
         </header>
 
-        <section className="grid auto-rows-[minmax(160px,_auto)] grid-cols-1 gap-6 md:grid-cols-6">
-          <article className="flex flex-col justify-between gap-6 rounded-3xl bg-white p-6 shadow-sm md:col-span-3 md:col-start-4 md:row-start-1">
-            <div className="flex items-end justify-between">
-              <h2 className="text-xl font-semibold">Panel principal</h2>
-              <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
-                Activo
-              </span>
-            </div>
-            <p className="text-sm text-zinc-600">
-              Bloque flexible con espacio para cambiar su tamano y posicion dentro del grid.
-            </p>
-            <div className="flex items-center gap-3">
-              <button className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-semibold text-white">
-                Ver detalles
-              </button>
-              <button className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold">
-                Mover
-              </button>
-            </div>
-          </article>
-
-          <aside className="flex flex-col gap-4 rounded-3xl border border-zinc-200 bg-white p-6 md:col-span-3 md:col-start-1 md:row-span-3 md:row-start-1">
+        <section className="grid auto-rows-[minmax(140px,_auto)] grid-cols-1 gap-6 md:grid-cols-12">
+          <aside className="flex flex-col justify-between gap-6 rounded-[32px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-1 md:row-span-4 md:row-start-1">
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-semibold">Resumen rapido</h2>
-              <span className="text-xs text-zinc-500">Semana</span>
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-100 text-indigo-600">
+                <span className="h-2.5 w-2.5 rounded-sm bg-indigo-500" />
+              </span>
+              <span className="text-xs font-medium text-slate-400">Paso a paso</span>
             </div>
-            <ul className="flex flex-1 flex-col justify-between gap-3">
-              <li className="flex items-center justify-between rounded-xl bg-zinc-50 px-4 py-3">
-                <span className="text-sm font-medium">Componentes</span>
-                <strong className="text-lg">05</strong>
-              </li>
-              <li className="flex items-center justify-between rounded-xl bg-zinc-50 px-4 py-3">
-                <span className="text-sm font-medium">Posiciones</span>
-                <strong className="text-lg">12</strong>
-              </li>
-              <li className="flex items-center justify-between rounded-xl bg-zinc-50 px-4 py-3">
-                <span className="text-sm font-medium">Tamanos</span>
-                <strong className="text-lg">08</strong>
-              </li>
-            </ul>
-            <footer className="flex items-center justify-between text-xs text-zinc-500">
-              <span>Actualizado hoy</span>
-              <button className="font-semibold text-zinc-900">Ver todo</button>
+            <nav className="flex-1">
+              <ol className="flex flex-col gap-6">
+                <li className="flex items-start gap-4">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                    <span className="text-xs font-bold">1</span>
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase text-slate-400">Step 1</p>
+                    <p className="text-sm font-semibold">Basic Details</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                    <span className="text-xs font-bold">2</span>
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase text-slate-400">Step 2</p>
+                    <p className="text-sm font-semibold">Company Details</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-indigo-400 text-indigo-500">
+                    <span className="text-xs font-bold">3</span>
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase text-slate-400">Step 3</p>
+                    <p className="text-sm font-semibold">Subscription Plan</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4 text-slate-400">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200">
+                    <span className="text-xs font-bold">4</span>
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase">Step 4</p>
+                    <p className="text-sm font-semibold">Payment Details</p>
+                  </div>
+                </li>
+              </ol>
+            </nav>
+            <footer className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400">
+                ?
+              </span>
+              <div>
+                <p className="text-xs text-slate-400">Having troubles?</p>
+                <p className="text-sm font-semibold">Contact us</p>
+              </div>
             </footer>
           </aside>
 
-          <section className="flex flex-col justify-between gap-4 rounded-3xl bg-zinc-900 p-6 text-white md:col-span-2 md:col-start-4 md:row-start-2">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold">Tarjeta oscura</h2>
-              <span className="rounded-full bg-white/20 px-3 py-1 text-xs">Flexible</span>
+          <section className="flex flex-col justify-center gap-4 rounded-[28px] bg-white p-6 shadow-lg md:col-span-8 md:col-start-5 md:row-start-1">
+            <div className="flex items-center justify-between text-xs font-medium text-slate-400">
+              <span>Step 1</span>
+              <span>Step 2</span>
+              <span className="text-indigo-600">Step 3</span>
+              <span>Step 4</span>
             </div>
-            <p className="text-sm text-white/70">
-              Ideal para cambiar su altura y moverla entre columnas.
-            </p>
-            <div className="flex items-center gap-2">
-              <button className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-zinc-900">
-                Ajustar
-              </button>
-              <button className="rounded-full border border-white/30 px-4 py-2 text-xs">
-                Reordenar
-              </button>
+            <div className="flex items-center gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">✓</div>
+              <div className="h-1 flex-1 rounded-full bg-emerald-200" />
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">✓</div>
+              <div className="h-1 flex-1 rounded-full bg-indigo-500" />
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border-4 border-indigo-200 bg-white text-indigo-600">
+                3
+              </div>
+              <div className="h-1 flex-1 rounded-full bg-slate-200" />
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400">
+                4
+              </div>
+            </div>
+            <div className="flex items-center justify-between text-sm font-semibold">
+              <span>Card Details</span>
+              <span>Form Review</span>
+              <span className="text-indigo-600">Authenticate OTP</span>
+              <span className="text-slate-400">Create Code</span>
             </div>
           </section>
 
-          <article className="flex flex-col gap-4 rounded-3xl border border-dashed border-zinc-300 bg-white p-6 md:col-span-2 md:col-start-4 md:row-start-3">
+          <article className="flex flex-col justify-between gap-4 rounded-[28px] bg-gradient-to-br from-indigo-600 to-indigo-500 p-6 text-white shadow-lg md:col-span-4 md:col-start-5 md:row-start-2">
             <header className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold">Zona libre</h2>
-              <span className="text-xs text-zinc-400">Drag</span>
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">✓</span>
+              <span className="rounded-full bg-emerald-400 px-3 py-1 text-xs font-semibold text-emerald-950">
+                Completed
+              </span>
             </header>
-            <div className="flex flex-1 items-end justify-between">
-              <div>
-                <p className="text-sm text-zinc-600">Usa este espacio para probar variantes.</p>
-                <time className="text-xs text-zinc-400">25 Feb 2026</time>
-              </div>
-              <button className="rounded-lg bg-zinc-100 px-3 py-2 text-xs font-semibold text-zinc-700">
-                Expandir
-              </button>
+            <div>
+              <p className="text-sm text-white/70">Card Details</p>
+              <p className="text-lg font-semibold">Form Review</p>
+              <p className="mt-2 text-xs text-white/70">
+                Application and forms will go through a step by step review process.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 text-xs">
+              <span className="rounded-full bg-white/20 px-3 py-1">In Progress</span>
+              <span className="text-white/70">Step 2</span>
             </div>
           </article>
 
-          <div className="flex flex-col justify-between gap-4 rounded-3xl bg-amber-50 p-6 md:col-span-1 md:col-start-6 md:row-span-2 md:row-start-2">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold">Notas</h2>
-              <span className="text-xs text-amber-700">Flexible</span>
-            </div>
-            <p className="text-sm text-amber-800">
-              Cambia su ancho o mueve este bloque para probar distintas posiciones.
+          <article className="flex flex-col justify-between gap-4 rounded-[28px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-5 md:row-start-3">
+            <header className="flex items-center gap-3">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">✓</span>
+              <div>
+                <p className="text-xs uppercase text-slate-400">Step 2</p>
+                <p className="text-sm font-semibold">Application Review</p>
+              </div>
+            </header>
+            <p className="text-xs text-slate-500">
+              Application and forms will go through a step by step review process.
             </p>
-            <form className="flex items-center gap-2">
-              <input
-                className="flex-1 rounded-lg border border-amber-200 bg-white px-3 py-2 text-xs"
-                placeholder="Escribe una idea"
-              />
-              <button className="rounded-lg bg-amber-500 px-3 py-2 text-xs font-semibold text-white">
-                Guardar
-              </button>
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <p className="text-xs uppercase text-slate-400">Time remaining</p>
+              <p className="text-lg font-semibold text-indigo-600">48 hours</p>
+              <div className="mt-3 h-2 rounded-full bg-slate-200">
+                <div className="h-2 w-2/3 rounded-full bg-indigo-500" />
+              </div>
+            </div>
+          </article>
+
+          <section className="flex flex-col gap-5 rounded-[32px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-9 md:row-span-2 md:row-start-2">
+            <header className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-indigo-600 text-white">S</span>
+                <div>
+                  <p className="text-xs uppercase text-slate-400">Step 4/5</p>
+                  <p className="text-sm font-semibold">Payment Details</p>
+                </div>
+              </div>
+              <span className="text-xs font-semibold text-indigo-600">In progress</span>
+            </header>
+            <form className="flex flex-1 flex-col gap-4">
+              <fieldset className="flex flex-col gap-2">
+                <label className="text-xs font-semibold text-slate-400">Card Details</label>
+                <input className="rounded-xl border border-slate-200 px-3 py-2 text-sm" placeholder="Alex Parkinson" />
+                <input className="rounded-xl border border-slate-200 px-3 py-2 text-sm" placeholder="4858 3445 1222 3344" />
+                <div className="grid grid-cols-2 gap-3">
+                  <input className="rounded-xl border border-slate-200 px-3 py-2 text-sm" placeholder="Expiry" />
+                  <input className="rounded-xl border border-slate-200 px-3 py-2 text-sm" placeholder="CVV" />
+                </div>
+              </fieldset>
+              <fieldset className="flex flex-col gap-2">
+                <label className="text-xs font-semibold text-slate-400">Billing Address</label>
+                <input className="rounded-xl border border-slate-200 px-3 py-2 text-sm" placeholder="Street Address" />
+                <div className="grid grid-cols-2 gap-3">
+                  <input className="rounded-xl border border-slate-200 px-3 py-2 text-sm" placeholder="City" />
+                  <input className="rounded-xl border border-slate-200 px-3 py-2 text-sm" placeholder="State" />
+                </div>
+              </fieldset>
+              <div className="mt-auto flex items-center justify-between">
+                <button className="rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold text-slate-500">
+                  Previous
+                </button>
+                <button className="rounded-full bg-indigo-600 px-4 py-2 text-xs font-semibold text-white">
+                  Next
+                </button>
+              </div>
             </form>
-          </div>
+          </section>
         </section>
       </main>
     </div>
