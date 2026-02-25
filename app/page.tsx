@@ -13,55 +13,14 @@ export default function Home() {
         </header>
 
         <section className="grid auto-rows-[minmax(140px,_auto)] grid-cols-1 gap-6 md:grid-cols-12">
-          <aside className="flex flex-col justify-between gap-6 rounded-[32px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-1 md:row-span-3 md:row-start-1">
-            <div className="flex items-center justify-between">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-100 text-indigo-600">
-                <span className="h-2.5 w-2.5 rounded-sm bg-indigo-500" />
-              </span>
-              <span className="text-xs font-medium text-slate-400">Paso a paso</span>
-            </div>
-            <nav className="flex-1">
-              <ol className="flex flex-col gap-6">
-                <li className="flex items-start gap-4">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
-                    <span className="text-xs font-bold">1</span>
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase text-slate-400">Step 1</p>
-                    <p className="text-sm font-semibold">Basic Details</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
-                    <span className="text-xs font-bold">2</span>
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase text-slate-400">Step 2</p>
-                    <p className="text-sm font-semibold">Company Details</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-indigo-400 text-indigo-500">
-                    <span className="text-xs font-bold">3</span>
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase text-slate-400">Step 3</p>
-                    <p className="text-sm font-semibold">Subscription Plan</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4 text-slate-400">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200">
-                    <span className="text-xs font-bold">4</span>
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase">Step 4</p>
-                    <p className="text-sm font-semibold">Payment Details</p>
-                  </div>
-                </li>
-              </ol>
-            </nav>
-            <div className="relative h-28 w-full overflow-hidden rounded-2xl border border-slate-100 bg-indigo-50">
-              <svg viewBox="0 0 320 120" className="absolute inset-0 h-full w-full" aria-hidden="true">
+          <aside className="flex flex-col justify-between rounded-[32px] bg-white p-6 shadow-lg md:col-span-4 md:col-start-1 md:row-span-3 md:row-start-1">
+            <div className="relative flex h-full min-h-[520px] flex-1 flex-col gap-6 overflow-hidden rounded-2xl border border-slate-100 bg-indigo-100 p-5">
+              <svg
+                viewBox="0 0 320 120"
+                preserveAspectRatio="xMidYMid slice"
+                className="absolute inset-0 h-full w-full rounded-2xl"
+                aria-hidden="true"
+              >
                 <defs>
                   <linearGradient id="stepper-geo" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0%" stopColor="#e0e7ff" />
@@ -79,16 +38,65 @@ export default function Home() {
                 <path d="M225 120 L280 80 L320 120 Z" fill="#a5b4fc" />
                 <path d="M255 120 L300 90 L320 120 Z" fill="#818cf8" />
               </svg>
-            </div>
-            <footer className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400">
-                ?
-              </span>
-              <div>
-                <p className="text-xs text-slate-400">Having troubles?</p>
-                <p className="text-sm font-semibold">Contact us</p>
+
+              <div className="relative flex items-center justify-between">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/80 text-indigo-600">
+                  <span className="h-2.5 w-2.5 rounded-sm bg-indigo-500" />
+                </span>
+                <span className="text-xs font-medium text-slate-500">Paso a paso</span>
               </div>
-            </footer>
+
+              <nav className="relative flex-1">
+                <ol className="flex flex-col gap-6">
+                  <li className="flex items-start gap-4">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                      <span className="text-xs font-bold">1</span>
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase text-slate-400">Step 1</p>
+                      <p className="text-sm font-semibold">Basic Details</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                      <span className="text-xs font-bold">2</span>
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase text-slate-400">Step 2</p>
+                      <p className="text-sm font-semibold">Company Details</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-indigo-400 text-indigo-500">
+                      <span className="text-xs font-bold">3</span>
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase text-slate-400">Step 3</p>
+                      <p className="text-sm font-semibold">Subscription Plan</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4 text-slate-400">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200">
+                      <span className="text-xs font-bold">4</span>
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase">Step 4</p>
+                      <p className="text-sm font-semibold">Payment Details</p>
+                    </div>
+                  </li>
+                </ol>
+              </nav>
+
+              <footer className="relative flex items-center gap-3 rounded-xl border border-slate-200 bg-white/80 px-4 py-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400">
+                  ?
+                </span>
+                <div>
+                  <p className="text-xs text-slate-400">Having troubles?</p>
+                  <p className="text-sm font-semibold">Contact us</p>
+                </div>
+              </footer>
+            </div>
           </aside>
 
           <section className="flex flex-col justify-center gap-4 rounded-[28px] bg-white p-6 shadow-lg md:col-span-8 md:col-start-5 md:row-start-1">
